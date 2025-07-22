@@ -74,7 +74,7 @@ pipeline {
             echo 'Pipeline failed. Check logs for details.'
         }
         always {
-            echo 'Cleaning up Docker resources...'
+            echo 'Cleaning up Docker resources....'
             sh "docker system prune -f"
         }
     }
