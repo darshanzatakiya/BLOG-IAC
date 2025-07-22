@@ -66,20 +66,15 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            node {
-                echo '🧹 Cleaning up Docker system...'
-                sh 'docker system prune -f || true'
-            }
-        }
-
-        success {
-            echo '✅ Pipeline executed successfully. Docker image pushed to ECR.'
-        }
-
-        failure {
-            echo '❌ Pipeline failed. Check logs for errors.'
-        }
+   post {
+    always {
+        echo '🧹 Cleaning up Docker system...'
+        sh 'docker system prune -f || true'
+    }
+    success {
+        echo '✅ Pipeline executed successfully. Docker image pushed to ECR.'
+    }
+    failure {
+        echo '❌ Pipeline failed. Check logs for errors.'
     }
 }
