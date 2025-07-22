@@ -13,6 +13,7 @@ pipeline {
         AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
     }
 
+
     stages {
         stage('Checkout Source Code') {
             steps {
