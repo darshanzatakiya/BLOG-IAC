@@ -71,7 +71,7 @@ pipeline {
             echo '✅ Pipeline completed and images pushed to ECR.'
         }
         failure {
-            echo '❌ Pipeline failed.'
+            echo '❌Pipeline failed.'
         }
     }
 }
