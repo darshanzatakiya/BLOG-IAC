@@ -31,7 +31,7 @@ pipeline {
                         echo "Hardcoded secrets found:\n${result}"
                         error("Secrets detected in source code. Aborting pipeline.")
                     } else {
-                        echo "✅ No hardcoded secrets found."
+                        echo "No hardcoded secrets found."
                     }
                 }
             }
